@@ -4,6 +4,8 @@
 function maniac_post_types(){
   // Portrait 
   register_post_type('portraits', array(
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite' => array(
@@ -23,6 +25,8 @@ function maniac_post_types(){
   
   // Cover Ups 
   register_post_type('cover-ups', array(
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite' => array(
@@ -42,6 +46,8 @@ function maniac_post_types(){
   
   // Large Tats 
   register_post_type('large-tats', array(
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite' => array(
@@ -62,6 +68,8 @@ function maniac_post_types(){
   
   // Small Tats 
   register_post_type('small-tats', array(
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite' => array(
@@ -81,6 +89,8 @@ function maniac_post_types(){
   
   // FAQ Posts 
   register_post_type('faq', array(
+    'capability_type' => 'event',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt'),
     'rewrite' => array(

@@ -22,9 +22,20 @@
 
 
     <div class="container p-3">
-      <h1 class="sedgewick display-1">Contact</h1>
+      <h1 class="sedgewick display-1">Contact (under construction)</h1>
       <div class="container">
-        <form action="">
+        <form action="<?php get_theme_file_uri('dhcontact.php')?>" method="post">
+          <label for="name" class="p-2">Full Name: <br>
+            <input type="text" name="name">
+          </label>
+          <br>
+          <label class="p-2" for=""> Email &amp; Phone Number: <br>
+            <input type="text" placeholder="Phone Number" name="pNumber">
+          </label>
+          <label for="">
+            <input type="text" placeholder="Email" name="email" required>
+          </label>
+          <br>
           <label for="explanation" class="p-2">A brief explanation of your tattoo <br>
             <textarea name="explanation"  id="" ></textarea>
           </label>

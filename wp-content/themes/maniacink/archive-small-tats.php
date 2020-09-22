@@ -11,7 +11,7 @@ get_header();
           <div class="row">
             <?php 
               $showCustomPostType = new WP_Query(array(
-                'posts_per_page' => 1,
+                'posts_per_page' => 9,
                 'post_type' => 'small-tats',
                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1
               ));

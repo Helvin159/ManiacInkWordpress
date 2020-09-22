@@ -11,7 +11,7 @@ get_header();
           <div class="row">
             <?php 
               $showCustomPostType = new WP_Query(array(
-                'posts_per_page' => -1,
+                'posts_per_page' => 9,
                 'post_type' => 'cover-ups'
               ));
 
@@ -31,7 +31,20 @@ get_header();
                   </div>
               <?php }
             ?>
-            
+            <div class="container text-center p-5">
+                  <?php 
+                    // $showCustomPostType->have_posts();
+                    $base = 99999;
+                    echo paginate_links(array(
+                      'base' => str_replace($base, '%#%', get_pagenum_link($base)),
+                      'format' => '?paged=%#%',
+                      'current' => max(1, get_query_var('paged')),
+                      'total' => $showCustomPostType->max_num_pages
+                    ));
+                  
+                  wp_reset_postdata();
+                  ?>
+                </div> 
           </div>
         </div>
 

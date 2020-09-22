@@ -321,6 +321,23 @@ html {
     display: block;
   }
 
+  .size-maniacHomeBlog {
+    width: 200px;
+    height: auto;
+    max-height: auto;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    align-self: center;
+    /* margin-right: 25%; */
+  }
+
+  .size-maniacSmallLandscape {
+    width: 275px;
+    height: auto;
+    max-height: auto;
+  }
+
   .navbar {
     top: 0;
   }
@@ -373,10 +390,30 @@ html {
     border-radius: 10px;
     width: 100%;
   }
+
+  .size-maniacHomeBlog {
+    width: 275px;
+    height: auto;
+    max-height: auto;
+  }
+
+  .size-maniacSmallLandscape {
+    width: 275px;
+    height: auto;
+    max-height: auto;
+  }
+
+  .portrait-heading {
+    font-size: 20px;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .portrait-heading {
+    font-size: 20px;
+  }
+
   .navbar-brand img {
     width: 35px;
   }

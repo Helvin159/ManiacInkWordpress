@@ -30,7 +30,7 @@
 
 
 			<li class="nav-item <?php if(is_page('contact')) echo 'active';?>">
-				<a  class="nav-link" data-toggle="modal" data-target="#contactmodal">
+				<a  href="<?php echo esc_url(site_url('contact'))?>" class="nav-link">
 					Contact Me!
 				</a>
 			</li>

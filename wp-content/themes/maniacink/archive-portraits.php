@@ -5,7 +5,7 @@ get_header();
         <!-- Tattoo Page Template -->
         <div class="container-fluid py-5">
           <div class="container pt-5 mt-5">
-            <h1 style="font-family: 'Sedgwick Ave Display', cursive;" class="display-1">Portraits</h1>
+            <h1 style="font-family: 'Sedgwick Ave Display', cursive;" class="display-1 portrait-heading">Portraits</h1>
           </div>
           <hr class="w-75 center pb-5">
           <div class="row">

@@ -41,8 +41,9 @@ function maniac_features(){
   add_theme_support('post-thumbnails');
   add_image_size('maniacMediumLandscape', 800, 460, true);
   add_image_size('maniacSmallLandscape', 400, 260, true);
-  add_image_size('maniacSmallSquare', 260, 260, true);
+  add_image_size('maniacSmallSquare', 220, 220, true);
   add_image_size('maniacHomeBlog', 350, 250, true);
+  add_image_size('flexible', 9999, 9999, true);
 }
 
 add_action('after_setup_theme', 'maniac_features');

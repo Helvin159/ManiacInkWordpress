@@ -24,16 +24,16 @@ get_header(); ?>
         Blog</h1>
       </div>
       <hr class="w-75 text-center">
-        <div class="container-fluid py-5 ">
+        <div class="container-fluid py-2 ">
           <?php
             while(have_posts()){
               the_post();?>
               <div class="container py-4 my-3">
                 <div class="row">
-                  <div class="col-3">
+                  <div class="col-lg-3">
                     <?php the_post_thumbnail('maniacSmallSquare');?>
                   </div>
-                  <div class="col-9">
+                  <div class="col-lg-9">
                     <h1><a href="<?php the_permalink();?>"> <?php the_title();?> </a></h1>
                     <div class="container">
                       <p>Posted by <?php the_author_posts_link()?> on <?php the_time('F j, Y')?> in <?php echo get_the_category_list(', ')?></p>
@@ -48,9 +48,13 @@ get_header(); ?>
               
                 
               </div>
-                <?php } 
-                  echo paginate_links();
-                ?>
+                <?php } ?>
+                <div class="container text-center p-5">
+                  <?php echo paginate_links();
+                  
+                  wp_reset_postdata();
+                  ?>
+                </div> 
         </div>
 
 

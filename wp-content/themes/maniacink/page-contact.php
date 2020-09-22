@@ -24,7 +24,7 @@
     <div class="container p-3">
       <h1 class="sedgewick display-1">Contact (under construction)</h1>
       <div class="container">
-        <form action="<?php get_theme_file_uri('dhcontact.php')?>" method="post">
+        <!-- <form action="<?php //get_theme_file_uri('dhcontact.php')?>" method="post">
           <label for="name" class="p-2">Full Name: <br>
             <input type="text" name="name">
           </label>
@@ -58,7 +58,8 @@
           </label>
           <br>
           <input type="submit" class="btn btn-md btn-danger my-3">
-        </form>
+        </form> -->
+        <?php the_content();?>
       </div>
 
     </div>

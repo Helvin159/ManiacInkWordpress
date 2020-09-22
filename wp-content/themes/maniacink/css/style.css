@@ -402,10 +402,6 @@ html {
     height: auto;
     max-height: auto;
   }
-
-  .portrait-heading {
-    font-size: 20px;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

@@ -12,7 +12,8 @@ get_header();
             <?php 
               $showCustomPostType = new WP_Query(array(
                 'posts_per_page' => 9,
-                'post_type' => 'cover-ups'
+                'post_type' => 'cover-ups',
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1
               ));
 
               while ($showCustomPostType->have_posts()){

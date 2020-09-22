@@ -12,7 +12,8 @@ get_header();
             <?php 
               $showCustomPostType = new WP_Query(array(
                 'posts_per_page' => 9,
-                'post_type' => 'large-tats'
+                'post_type' => 'large-tats',
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1
               ));
 
               while ($showCustomPostType->have_posts()){

@@ -25,8 +25,8 @@
       <h1 class="sedgewick display-1 text-center">Contact</h1>
       <div class="container px-5">
           <?php 
-          //require_once('includes/contact.php'); 
-          the_content();
+          require_once('includes/contact.php'); 
+          //the_content();
           ?>
       </div>
 

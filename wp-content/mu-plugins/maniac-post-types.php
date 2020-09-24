@@ -113,7 +113,8 @@ function maniac_post_types(){
     'capability_type' => 'contact',
     'map_meta_cap' => true,
     'show_in_rest' => true,
-    'supports' => array('title', 'editor', 'custom-fields', 'post-formats'),
+    'supports' => array('title', 'editor', 'custom-fields', 'post-formats', 'thumbnail'),
+    'exclude_from_search' => true,
     'rewrite' => array(
       'slug' => 'faq'
     ),

@@ -11,7 +11,7 @@ get_header();
 
     <div class="col-md-4">
       <div class="container py-5">
-      <div class="container" style="max-height:300px;min-height:275px;background-image:url(<?php echo get_theme_file_uri('assets/portraits/queen.PNG')?>);background-size:cover;background-position:center center;border-radius:5px; box-shadow:1px 1px 4px rgba(0,0,0,0.5);">
+      <div class="container" style="max-height:300px;min-height:275px;background-image:url(<?php echo get_theme_file_uri('assets/portraits/queen.png')?>);background-size:cover;background-position:center center;border-radius:5px; box-shadow:1px 1px 4px rgba(0,0,0,0.5);">
 
         </div>
           <hr class="w-75">

@@ -12,7 +12,6 @@ function maniac_files (){
   // wp_enqueue_style('main-my-style', get_theme_file_uri('css/style.css'), null, '1.0', 'all');
 
   if(strstr($_SERVER['SERVER_NAME'], get_site_url())){
-  //if(strstr($_SERVER['SERVER_NAME'], 'helvinrymer.com/pages/maniacink/')){
   // Bundled Files
   wp_enqueue_script('main-maniac-scripts', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   } else{

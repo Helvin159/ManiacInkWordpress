@@ -30,7 +30,19 @@ class newMessage {
     //   success: maniacData.root_url + "wp-json/wp/v2/contact/",
     //   error: x,
     // });
-    alert("whatsup");
+    alert(
+      $("#name").val() +
+        " " +
+        $("#pNumber").val() +
+        " " +
+        $("#email").val() +
+        " " +
+        $("#explanation").val() +
+        " " +
+        $("#concept").val() +
+        " " +
+        $("#covid").val()
+    );
   }
 }
 

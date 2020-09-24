@@ -24,42 +24,10 @@
     <div class="container p-3 ">
       <h1 class="sedgewick display-1 text-center">Contact</h1>
       <div class="container px-5">
-        <!-- <form action="<?php //get_theme_file_uri('dhcontact.php')?>" method="post">
-          <label for="name" class="p-2">Full Name: <br>
-            <input type="text" name="name">
-          </label>
-          <br>
-          <label class="p-2" for=""> Email &amp; Phone Number: <br>
-            <input type="text" placeholder="Phone Number" name="pNumber">
-          </label>
-          <label for="">
-            <input type="text" placeholder="Email" name="email" required>
-          </label>
-          <br>
-          <label for="explanation" class="p-2">A brief explanation of your tattoo <br>
-            <textarea name="explanation"  id="" ></textarea>
-          </label>
-          <br>
-          <label for="concept" class="p-2">Your tattoo idea/concept <br>
-            <textarea name="concept" id="" ></textarea>
-          </label>
-          <br>
-          <label for="" class="p-2">A picture of where you'd like the tattoo placed. (Please positition straight towards the camera). 
-            <br>
-            <input type="file">
-          </label>
-          <br>
-          <label for="">For safety reasons, have you been exposed to someone with COVID-19, or been tested? <br>
-            <select name="covid" id="">
-              <option value="--">--</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </label>
-          <br>
-          <input type="submit" class="btn btn-md btn-danger my-3">
-        </form> -->
-        <?php the_content();?>
+          <?php 
+          //require_once('includes/contact.php'); 
+          the_content();
+          ?>
       </div>
 
     </div>

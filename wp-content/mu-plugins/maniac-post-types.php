@@ -107,6 +107,27 @@ function maniac_post_types(){
     ),
     'menu_icon' => 'dashicons-media-text'
   ));
+  
+  // Contact Posts 
+  register_post_type('contact', array(
+    'capability_type' => 'contact',
+    'map_meta_cap' => true,
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'custom-fields', 'post-formats'),
+    'rewrite' => array(
+      'slug' => 'faq'
+    ),
+    'public' => true,
+    'has_archive' => false,
+    'labels' => array(
+      'name' => 'Contacts',
+      'add_new_item' => 'Add New Contact',
+      'edit_item' => 'Edit Contact',
+      'all_items' => 'All Contact',
+      'singular_name' => 'Contact',
+    ),
+    'menu_icon' => 'dashicons-smartphone'
+  ));
 }
 
 add_action('init', 'maniac_post_types');

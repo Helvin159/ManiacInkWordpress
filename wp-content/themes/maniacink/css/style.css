@@ -15,6 +15,25 @@ font-family: 'Quicksand', sans-serif;
   font-size: 30px;
 }
 
+.descBox {
+  width: 100%;
+  min-width: 375px;
+  min-height: 125px;
+  height: 100%;
+  border: dotted 0.2px lightgrey;
+  border-radius: 5px;
+}
+
+.textFields {
+  border: dotted 1px lightgrey;
+  width: 200px;
+  height: 45px;
+}
+
+.inputLabels {
+  font-size: 18px;
+}
+
 .page-numbers {
   font-family: "Sedgwick Ave Display", cursive;
   padding: 0.5%;
@@ -524,5 +543,4 @@ html {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  ...;
 }

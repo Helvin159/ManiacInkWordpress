@@ -16,7 +16,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<div class="collapse navbar-collapse " id="navbarSupportedContent">
 		<ul class="navbar-nav m-auto ">
 			<li class="nav-item <?php if(is_page('home')) echo 'active';?>">
 				<a class="nav-link" href="<?php echo esc_url(site_url());?>">Home<span class="sr-only"></span></a>
@@ -40,9 +40,12 @@
 
 			</li>
 		</ul>
-		<form method="post" action="dhsignup.php" class="form-inline my-2 my-lg-0">
-			<input class="form-control mr-sm-2" type="email" name="email" placeholder="Sign-up">
-			<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Sign-up</button>
-		</form>
+		<?php if(!is_user_logged_in()){ ?>
+			<a class="btn btn-outline-primary my-2 my-sm-0 mx-1" href="<?php echo wp_login_url()?>">Login</a>
+			<a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="<?php echo wp_registration_url()?>">Sign-up</a>
+		<?php } else{ ?>
+			<a class="btn btn-outline-danger my-2 my-sm-0" href="<?php echo wp_logout_url()?>">Logout</a>
+		<?php }?>
+		
 	</div>
 </nav>

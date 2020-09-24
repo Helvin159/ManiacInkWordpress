@@ -17,11 +17,17 @@ function maniac_files (){
   } else{
     wp_enqueue_style('my-style', get_theme_file_uri('/css/style.css'), null, '1.0', 'all');
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.920bf068e75aa8ef387f.js'), NULL, '1.0', true);
-    wp_enqueue_script('main-scripts', get_theme_file_uri('/bundled-assets/scripts.5dba069f65caa469a186.js'), NULL, '1.0', true);
+    wp_enqueue_script('main-scripts', get_theme_file_uri('/bundled-assets/scripts.f9f6020594505841c21c.js'), NULL, '1.0', true);
+    wp_enqueue_script('cant', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   }
+  // wp_localize_script('cant', 'maniacWow', array(
+  //   'root_url' => get_site_url(),
+  //   'nonce' => wp_create_nonce('wp_rest')
+  // ));
 
-  wp_localize_script('main-maniac-scripts', 'maniacData', array(
-    'root_url' => get_site_url()
+  wp_localize_script('cant', 'maniacData', array(
+    'root_url' => get_site_url(),
+    'nonce' => wp_create_nonce('wp_rest')
   ));
 
 
@@ -69,4 +75,33 @@ function maniacContacRoutes(){
       'post_content' => 'Hi'
     ));
   }
+}
+
+// Customize Login Screen
+add_filter('login_headerurl', 'ourHeaderUrl');
+
+function ourHeaderUrl(){
+  return esc_url(site_url('/'));
+}
+
+add_action('login_enqueue_scripts', 'ourLoginCss');
+
+function ourLoginCss(){
+  // Font Awesome
+  wp_enqueue_style('font_awesome', '//use.fontawesome.com/releases/v5.14.0/css/all.css', null, '1.0', 'all');
+  wp_enqueue_style('my-style', get_theme_file_uri('/css/style.css'), null, '1.0', 'all');
+}
+
+add_filter('login_header_title', 'ourLoginTitle');
+
+function ourLoginTitle(){
+  return get_blog_info('name');
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
 }

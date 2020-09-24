@@ -22,14 +22,11 @@
 
 
     <div class="container p-3 ">
-      <h1 class="sedgewick display-1 text-center">Contact</h1>
-      <div class="container px-5">
+      <h1 class="sedgewick display-1 text-center" id="contactHeader">Contact</h1>
           <?php 
           require_once('includes/contact.php'); 
           //the_content();
           ?>
-      </div>
-
     </div>
   </div>
 

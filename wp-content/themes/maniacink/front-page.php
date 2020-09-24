@@ -54,7 +54,7 @@
           </div>
           <hr>
           <div class="container">
-            <a class="sedgewickLink largeLink" href="<?php echo site_url('book-a-session')?>">Booking A Session</a>
+            <a class="sedgewickLink largeLink" href="<?php echo site_url('contact')?>">Booking A Session</a>
           </div>
         </div>
       </div>

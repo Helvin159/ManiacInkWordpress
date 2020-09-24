@@ -12,37 +12,47 @@ class newMessage {
 
   // methods
   messageDispatcher() {
-    // var newMessage = {
-    //   name: $("#name").val(),
-    //   phone: $("#pNumber").val(),
-    //   email: $("#email"),
-    //   explanation: $("#explanation").val(),
-    //   concept: $("#concept").val(),
-    //   covid: $("#covid").val(),
-    // };
-    // $.ajax({
-    //   beforeSend: (xhr) => {
-    //     xhr.setRequestHeader("XP-WP-Nonce", maniacData);
-    //   },
-    //   url: maniacData.root_url + "wp-json/wp/v2/contact/",
-    //   type: "POST",
-    //   data: newMessage,
-    //   success: maniacData.root_url + "wp-json/wp/v2/contact/",
-    //   error: x,
-    // });
-    alert(
-      $("#name").val() +
-        " " +
+    var newMessage = {
+      title: $("#name").val(),
+      content:
+        "Phone Number:" +
         $("#pNumber").val() +
-        " " +
-        $("#email").val() +
-        " " +
+        " <br> " +
+        "Email:" +
+        $("#address").val() +
+        "<br>" +
+        "Explanation of Tattoo: " +
         $("#explanation").val() +
-        " " +
+        "<br>" +
+        "Concept of Tattoo: " +
         $("#concept").val() +
-        " " +
-        $("#covid").val()
-    );
+        "<br>" +
+        "Covid Question: " +
+        $("#covid").val(),
+      status: "private",
+    };
+    $.ajax({
+      beforeSend: (xhr) => {
+        xhr.setRequestHeader("X-WP-Nonce", maniacData.nonce);
+      },
+      url: maniacData.root_url + "/wp-json/wp/v2/contact/",
+      type: "POST",
+      data: newMessage,
+      success: (response) => {
+        setTimeout(function () {
+          console.log("good");
+          console.log(response);
+          $("#contactForm").addClass("d-none");
+          $("#thankYou").removeClass("d-none");
+        }, 850);
+      },
+      error: (response) => {
+        console.log("sorry");
+        console.log(response);
+        $("#contactForm").addClass("d-none");
+        $("#sorry").removeClass("d-none");
+      },
+    });
   }
 }
 

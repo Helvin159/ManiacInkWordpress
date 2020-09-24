@@ -1,13 +1,16 @@
+<div class="container px-5" id="contactForm">
 <label for="name" class="p-2 inputLabels">Full Name: <br>
-  <input type="text" class="textFields" id="name" name="name">
+  <input type="text" class="textFields" id="name" name="name" required>
 </label>
 <br>
-<label class="p-2 inputLabels" for=""> Email &amp; Phone Number: <br>
+<label class="p-2 inputLabels" for="">Phone Number: <br>
   <input type="text" class="textFields" id="pNumber" placeholder="Phone Number" name="pNumber">
 </label>
-<label  class ="inputLabels" for="">
-  <input type="text" class="textFields" id="email" placeholder="Email" name="email" >
-  <input type="text" class="textFields" id="confirmEmail" placeholder="Confirm - Email" name="confirmEmail" >
+<br>
+<label  class ="inputLabels p-2" for="">Email: <br>
+  <input type="email" class="textFields mr-2" id="address" placeholder="Email" name="email" required>
+  <input type="email" class="textFields ml-2" id="confirmEmail" placeholder="Confirm - Email" name="confirmEmail" required>
+  <p style="color:red" class="d-none text-right" id="reConfirm">Email does not match!</p>
 </label>
 <br>
 <div class="row">
@@ -31,9 +34,19 @@
   <br>
   <select name="covid"  id="covid">
     <option value="--">--</option>
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
+    <option value="I Don't Know, I haven't been tested.">I Don't Know, I haven't been tested.</option>
+    <option value="I have been tested, and I am negative.">I have been tested, and I am negative.</option>
+    <option value="I have been tested, and I have Covid-19">I have been tested, and I have Covid-19</option>
   </select>
 </label>
 <br>
 <button id="submit" class="btn btn-md btn-danger my-3">Submit</button>
+</div>
+
+<div class="container text-center p-5 d-none" id="thankYou">
+  <h1 class="sedgewick">Thank you for your message, we'll be in touch as soon as possible!</h1>
+</div>
+
+<div class="container text-center p-5 d-none" id="sorry">
+  <h1 class="sedgewick">No Good, Try Again!</h1>
+</div>

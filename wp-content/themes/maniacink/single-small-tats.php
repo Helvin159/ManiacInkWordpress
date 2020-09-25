@@ -6,7 +6,7 @@ get_header();
   the_post(); ?>
     <div class="container-fluid py-5">
           <div class="container pt-5 mt-5">
-            <h1 style="font-family: 'Sedgwick Ave Display', cursive;" class="display-1">
+            <h1 style="font-family: 'Sedgwick Ave Display', cursive;" class="display-1 text-center">
             <?php the_title();?></h1>
           </div>
           <hr class="w-75 center pb-5">
@@ -14,7 +14,11 @@ get_header();
             <div class="my-3">
               <div class="container text-center">
                 <div class="container">
-                  <img src="<?php echo get_theme_file_uri('assets/portraits/8.jpg')?>" class="img-fluid border rounded" alt="">
+                  
+                  <?php
+                    the_post_thumbnail('maniacMediumLandscape');
+                  ?>
+
                 </div>
                 <hr>
                 <div class="container">

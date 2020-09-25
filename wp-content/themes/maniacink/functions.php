@@ -27,11 +27,6 @@ function maniac_files (){
     'root_url' => get_site_url(),
     'nonce' => wp_create_nonce('wp_rest')
   ));  
-  
-  wp_localize_script('maniac-scripts', 'maniacData', array(
-    'root_url' => get_site_url(),
-    'nonce' => wp_create_nonce('wp_rest')
-  ));
 
   // Jquery
   wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.5.1.slim.min.js', NULL, '1.0', true);

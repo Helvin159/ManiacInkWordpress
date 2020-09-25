@@ -24,15 +24,17 @@ class newMessage {
 
     $.ajax({
       beforeSend: (xhr) => {
-        xhr.setRequestHeader("X-WP-Nonce", maniacData.nonce);
+        xhr.setRequestHeader(
+          "X-WP-Nonce",
+          "helvinrymer.com/pages/maniacink/wp-json/maniac/v1/new-message"
+        );
       },
-      url: maniacData.root_url + "/wp-json/maniac/v1/new-message",
+      url: "helvinrymer.com/pages/maniacink/wp-json/maniac/v1/new-message",
       type: "POST",
       data: newMessage,
       success: (response) => {
         console.log(response);
         console.log("good");
-        console.log(newMessage);
         setTimeout(function () {
           $("#contactForm").addClass("d-none");
           $("#thankYou").removeClass("d-none");
@@ -41,7 +43,6 @@ class newMessage {
       error: (response) => {
         console.log("sorry");
         console.log(response);
-        console.log(newMessage);
         $("#contactForm").addClass("d-none");
         $("#thankYou").removeClass("d-none");
       },

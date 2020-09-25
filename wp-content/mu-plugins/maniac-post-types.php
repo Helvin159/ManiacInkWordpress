@@ -93,9 +93,6 @@ function maniac_post_types(){
     'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => array('title', 'editor', 'excerpt'),
-    'rewrite' => array(
-      'slug' => 'faq'
-    ),
     'public' => true,
     'has_archive' => false,
     'labels' => array(

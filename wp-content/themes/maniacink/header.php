@@ -11,13 +11,13 @@
 
 <!--Nav-->
 <nav class="navbar navbar-expand-lg navbar-dark " >
-	<a class="navbar-brand" href="<?php esc_url(site_url());?>">Maniac Ink <img src="<?php echo get_theme_file_uri('assets/img/logo3.png');?>"></a>
+	<a class="navbar-brand mr-5 pr-4" href="<?php esc_url(site_url('/'));?>">Maniac Ink <img src="<?php echo get_theme_file_uri('assets/img/logo3.png');?>"></a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
 	<div class="collapse navbar-collapse " id="navbarSupportedContent">
-		<ul class="navbar-nav m-auto ">
+		<ul class="navbar-nav m-auto pr-1 pl-5">
 			<li class="nav-item <?php if(is_page('home')) echo 'active';?>">
 				<a class="nav-link" href="<?php echo esc_url(site_url());?>">Home<span class="sr-only"></span></a>
 			</li>
@@ -40,12 +40,13 @@
 
 			</li>
 		</ul>
+		<div class="m-auto">
 		<?php if(!is_user_logged_in()){ ?>
 			<a class="btn btn-outline-primary my-2 my-sm-0 mx-1" href="<?php echo wp_login_url()?>">Login</a>
 			<a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="<?php echo wp_registration_url()?>">Sign-up</a>
 		<?php } else{ ?>
 			<a class="btn btn-outline-danger my-2 my-sm-0" href="<?php echo wp_logout_url()?>">Logout</a>
 		<?php }?>
-		
+		</div>
 	</div>
 </nav>

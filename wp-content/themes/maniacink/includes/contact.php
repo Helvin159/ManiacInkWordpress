@@ -14,12 +14,12 @@
 </label>
 <br>
 <div class="row">
-  <div class="col-6">
+  <div class="col-md-6">
     <label for="explanation" class="p-2 inputLabels">A brief explanation of your tattoo <br>
     <textarea name="explanation" class="descBox" id="explanation" id="" ></textarea>
     </label>
   </div>
-  <div class="col-6">
+  <div class="col-md-6">
     <label for="concept" class="p-2 inputLabels">Your tattoo idea/concept <br>
       <textarea name="concept" class="descBox" id="concept"></textarea>
     </label>

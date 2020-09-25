@@ -11,7 +11,7 @@ get_header();
           </div>
           <hr class="w-75 center pb-5">
           <div class="container">
-            <p><?php the_content();?></p>
+            <p><?php the_content(); ?></p>
           </div>
         </div>
 

@@ -4,35 +4,29 @@ require get_theme_file_path('/includes/contact-route.php');
 
 // Files
 function maniac_files (){
+  
   // Font Awesome
   wp_enqueue_style('font_awesome', '//use.fontawesome.com/releases/v5.14.0/css/all.css', null, '1.0', 'all');
   // Google Fonts
   wp_enqueue_style('google_fonts', '//fonts.googleapis.com/css?family=Quicksand|Sedgwick+Ave+Display&display=swap', null, '1.0', 'all');
   // Bootstrap
   wp_enqueue_style('bootstrap', '//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', null, '1.0', 'all');
+  // CSS
+  wp_enqueue_style('my-style', get_theme_file_uri('/css/style.css'), null, '1.0', 'all');
 
-  // wp_enqueue_style('main-my-style', get_theme_file_uri('css/style.css'), null, '1.0', 'all');
-
-  if(strstr($_SERVER['SERVER_NAME'], get_site_url())){
+  if(strstr($_SERVER['SERVER_NAME'], 'maniacink2.local')){
   // Bundled Files
   wp_enqueue_script('main-maniac-scripts', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   } else{
-    wp_enqueue_style('my-style', get_theme_file_uri('/css/style.css'), null, '1.0', 'all');
+    wp_enqueue_style('main-my-style', get_theme_file_uri('/bundled-assets/style.css'), null, '1.0', 'all');
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.920bf068e75aa8ef387f.js'), NULL, '1.0', true);
     wp_enqueue_script('main-scripts', get_theme_file_uri('/bundled-assets/scripts.a2a295737e9ed27f5502.js'), NULL, '1.0', true);
-    wp_enqueue_script('cant', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
+    // wp_enqueue_script('cant', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   }
-  // wp_localize_script('cant', 'maniacWow', array(
-  //   'root_url' => get_site_url(),
-  //   'nonce' => wp_create_nonce('wp_rest')
-  // ));
-
-  wp_localize_script('cant', 'maniacData', array(
+  wp_localize_script('main-maniac-scripts', 'maniacData', array(
     'root_url' => get_site_url(),
     'nonce' => wp_create_nonce('wp_rest')
   ));
-
-
 
   // Jquery
   wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.5.1.slim.min.js', NULL, '1.0', true);

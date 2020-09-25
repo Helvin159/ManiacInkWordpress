@@ -14,34 +14,26 @@ class newMessage {
   messageDispatcher() {
     var newMessage = {
       title: $("#name").val(),
-      content:
-        "Phone Number:" +
-        $("#pNumber").val() +
-        " <br> " +
-        "Email:" +
-        $("#address").val() +
-        "<br>" +
-        "Explanation of Tattoo: " +
-        $("#explanation").val() +
-        "<br>" +
-        "Concept of Tattoo: " +
-        $("#concept").val() +
-        "<br>" +
-        "Covid Question: " +
-        $("#covid").val(),
+      phone: $("#pNumber").val(),
+      email: $("#address").val(),
+      explanation: $("#explanation").val(),
+      concept: $("#concept").val(),
+      covid: $("#covid").val(),
       status: "private",
     };
+
     $.ajax({
       beforeSend: (xhr) => {
         xhr.setRequestHeader("X-WP-Nonce", maniacData.nonce);
       },
-      url: maniacData.root_url + "/wp-json/wp/v2/contact/",
+      url: maniacData.root_url + "/wp-json/maniac/v1/new-message",
       type: "POST",
       data: newMessage,
       success: (response) => {
+        console.log(response);
+        console.log("good");
+        console.log(newMessage);
         setTimeout(function () {
-          console.log("good");
-          console.log(response);
           $("#contactForm").addClass("d-none");
           $("#thankYou").removeClass("d-none");
         }, 850);
@@ -49,8 +41,9 @@ class newMessage {
       error: (response) => {
         console.log("sorry");
         console.log(response);
+        console.log(newMessage);
         $("#contactForm").addClass("d-none");
-        $("#sorry").removeClass("d-none");
+        $("#thankYou").removeClass("d-none");
       },
     });
   }

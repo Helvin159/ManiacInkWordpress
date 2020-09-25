@@ -25,10 +25,10 @@
     </label>
   </div>
 </div>
-<label for="" class="p-2 inputLabels">A picture of where you'd like the tattoo placed. (Please positition straight towards the camera). 
+<!-- <label for="" class="p-2 inputLabels">A picture of where you'd like the tattoo placed. (Please positition straight towards the camera). 
   <br>
   <input type="file" id="image">
-</label>
+</label> -->
 <br>
 <label for="" class="inputLabels">For safety reasons, have you been exposed to someone with COVID-19, or been tested? 
   <br>

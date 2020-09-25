@@ -1,5 +1,7 @@
 <?php
 
+require get_theme_file_path('/includes/contact-route.php');
+
 // Files
 function maniac_files (){
   // Font Awesome
@@ -17,8 +19,8 @@ function maniac_files (){
   } else{
     wp_enqueue_style('my-style', get_theme_file_uri('/css/style.css'), null, '1.0', 'all');
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/vendors~scripts.920bf068e75aa8ef387f.js'), NULL, '1.0', true);
-    wp_enqueue_script('main-scripts', get_theme_file_uri('/bundled-assets/scripts.f9f6020594505841c21c.js'), NULL, '1.0', true);
-    wp_enqueue_script('cant', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
+    wp_enqueue_script('main-scripts', get_theme_file_uri('/bundled-assets/scripts.a2a295737e9ed27f5502.js'), NULL, '1.0', true);
+    // wp_enqueue_script('cant', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   }
   // wp_localize_script('cant', 'maniacWow', array(
   //   'root_url' => get_site_url(),
@@ -57,25 +59,6 @@ function maniac_features(){
 
 add_action('after_setup_theme', 'maniac_features');
 
-
-// Routes
-add_action('rest_api_init', 'maniacContacRoutes');
-
-function maniacContacRoutes(){
-  register_rest_route('maniac/v1', 'manage-contact', array(
-    'methods' => 'POST',
-    'callback' => 'createContact'
-  ));
-
-  function createContact(){
-    wp_insert_post(array(
-      'post_type' => 'contact',
-      'post_status' => 'publish',
-      'post_title' => 'New Contact',
-      'post_content' => 'Hi'
-    ));
-  }
-}
 
 // Customize Login Screen
 add_filter('login_headerurl', 'ourHeaderUrl');

@@ -24,12 +24,9 @@ class newMessage {
 
     $.ajax({
       beforeSend: (xhr) => {
-        xhr.setRequestHeader(
-          "X-WP-Nonce",
-          "helvinrymer.com/pages/maniacink/wp-json/maniac/v1/new-message"
-        );
+        xhr.setRequestHeader("X-WP-Nonce", maniacData.nonce);
       },
-      url: "helvinrymer.com/pages/maniacink/wp-json/maniac/v1/new-message",
+      url: maniacData.root_url + "/wp-json/maniac/v1/new-message",
       type: "POST",
       data: newMessage,
       success: (response) => {

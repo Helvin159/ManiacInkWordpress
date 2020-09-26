@@ -6,12 +6,12 @@
 				<div class="col-md-4" style="border-right: 1px solid #fff;">
 				<h4>Page Links</h4>
 					<ul>
-						<a href="<?php esc_url(site_url());?>"><li>Home</li></a>
-						<a href="<?php esc_url(site_url('blog'));?>"><li>Blog</li></a>
-						<a href="<?php esc_url(site_url('large-tats'));?>"><li>Tattoos</li></a>
-						<a href="<?php esc_url(site_url('portraits'));?>"><li>Portraits</li></a>
-						<a href="<?php esc_url(site_url('cover-ups'));?>"><li>Cover-ups</li></a>
-						<a href="<?php esc_url(site_url('small-tats'));?>"><li>Small Tats</li></a>
+						<a href="<?php esc_url(site_url('/home'));?>"><li>Home</li></a>
+						<a href="<?php esc_url(site_url('/blog'));?>"><li>Blog</li></a>
+						<a href="<?php esc_url(site_url('/large-tats'));?>"><li>Tattoos</li></a>
+						<a href="<?php esc_url(site_url('/portraits'));?>"><li>Portraits</li></a>
+						<a href="<?php esc_url(site_url('/cover-ups'));?>"><li>Cover-ups</li></a>
+						<a href="<?php esc_url(site_url('/small-tats'));?>"><li>Small Tats</li></a>
 					</ul>
 				</div>
 				<div class="col-md-4" style="border-right: 1px solid #fff;">
@@ -35,7 +35,7 @@
 					</div>
 					<div class="container socialfaq ">
 						<ul>
-							<a href="https://www.instagram.com/artmaniac03/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+							<a href="https://www.instagram.com/inkmaniac03/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
 						</ul>
 					</div>
 				</div>
@@ -49,7 +49,7 @@
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col-sm-6 p-3 text-center">
-						<a href="index.html"><h3 class="m-auto">Maniac Ink</h3></a>
+						<a href="<?php esc_url(site_url())?>"><h3 class="m-auto">Maniac Ink</h3></a>
 					</div>
 					<div class="col-sm-3 text-center">
 						<img src="<?php echo get_theme_file_uri('assets/img/logo3.png')?>">
@@ -58,13 +58,13 @@
 			</div>
 			<div class="col-lg-9">
 				<ul>
-					<a class="btn" href="<?php echo site_url('home')?>"><li>Home</li></a>
-					<a class="btn" href="<?php echo site_url('about')?>"><li>About</li></a>
-					<a class="btn" href="<?php echo site_url('about')?>"><li>Contact</li></a>
-					<a class="btn" href="<?php echo site_url('portraits')?>"><li>Portraits</li></a>
-					<a class="btn" href="<?php echo site_url('cover-ups')?>"><li>Cover-ups</li></a>
-					<a class="btn" href="<?php echo site_url('small-tats')?>"><li>Small Tattoos</li></a>
-					<a class="btn" href="<?php echo site_url('large-tats')?>"><li>Large Tattoos</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/home'))?>"><li>Home</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/about'))?>"><li>About</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/contact'))?>"><li>Contact</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/portraits'))?>"><li>Portraits</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/cover-ups'))?>"><li>Cover-ups</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/small-tats'))?>"><li>Small Tattoos</li></a>
+					<a class="btn" href="<?php echo esc_url(site_url('/large-tats'))?>"><li>Large Tattoos</li></a>
 				</ul>
 			</div>
 		</div>

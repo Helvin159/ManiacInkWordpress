@@ -7,6 +7,7 @@
 				<h4>Page Links</h4>
 					<ul>
 						<a href="<?php echo esc_url(site_url('/home'));?>"><li>Home</li></a>
+						<a href="<?php echo esc_url(site_url('/about'));?>"><li>About</li></a>
 						<a href="<?php echo esc_url(site_url('/blog'));?>"><li>Blog</li></a>
 						<a href="<?php echo esc_url(site_url('/large-tats'));?>"><li>Tattoos</li></a>
 						<a href="<?php echo esc_url(site_url('/portraits'));?>"><li>Portraits</li></a>

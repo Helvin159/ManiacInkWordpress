@@ -26,7 +26,7 @@ function message($data){
       'post_type' => 'contact',
       'post_status' => 'publish',
       'post_title' => $title,
-      'post_content' => 'New Contact',
+      'post_content' => 'Phone: ' + $phone + '' + 'Email: ' + $email + '.',
       'meta_input' => array(
         'phone_number' =>  $phone,
         'email' => $email,
@@ -36,9 +36,9 @@ function message($data){
       )
     ));
 
-  $to = "Helvin@HelvinRymer.com"; // this is your Email address
+  $to = "Melii@ManiacInk.com, Helvin@HelvinRymer.com,Meliisart03@gmail.com"; // this is your Email address
   $from = $email; // this is the sender's Email address
-  $subject = "Form submission";
+  $subject = "New Email From ManiacInk!";
   $subject2 = "Thank you!";
 
 $message = "$title sent the following details:

@@ -2,7 +2,7 @@
   get_header();
   ?>
   <!--Hero-->
-  <div id="carouselExampleSlidesOnly" class="carousel slide hero" data-ride="carousel" >
+  <div id="carouselExampleSlidesOnly" class="carousel slide " data-ride="carousel" >
         <div class="carousel-inner">
           <div class="carousel-item active itemOne" style="background:url(<?php echo get_theme_file_uri('assets/img/3.jpg'); ?>); background-size:cover; background-position:center;height:30vh; width:100vw;">
           <!-- <img src="..." class="d-block w-100" alt="..." > -->

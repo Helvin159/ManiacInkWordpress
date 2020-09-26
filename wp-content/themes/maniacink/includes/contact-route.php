@@ -40,8 +40,8 @@ function message($data){
   $from = $email; // this is the sender's Email address
   $subject = "Form submission";
   $subject2 = "Thank you!";
-  $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$message = "<h1>$title sent the following details:</h1>
+
+$message = "$title sent the following details:
   
 Email: $email
 Phone: $phone

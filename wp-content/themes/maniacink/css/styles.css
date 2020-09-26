@@ -365,6 +365,9 @@ html {
     margin: 0px;
     padding: 0px;
     align-self: center;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
     /* margin-right: 25%; */
   }
 
@@ -372,6 +375,9 @@ html {
     width: 275px;
     height: auto;
     max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar {
@@ -428,15 +434,21 @@ html {
   }
 
   .size-maniacHomeBlog {
-    width: 275px;
+    width: 265px;
     height: auto;
     max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
   }
 
   .size-maniacSmallLandscape {
-    width: 275px;
+    width: 265px;
     height: auto;
     max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
   }
 }
 

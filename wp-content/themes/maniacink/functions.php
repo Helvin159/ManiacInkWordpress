@@ -22,7 +22,7 @@ function maniac_files (){
     wp_enqueue_style('my-style', get_theme_file_uri('/css/styles.css'), null, '1.0', 'all');
   } else{
 
-      wp_enqueue_style('my-main-style', get_theme_file_uri('/bundled-assets/undefined'), null, '1.0', 'all');
+      // wp_enqueue_style('my-main-style', get_theme_file_uri('/bundled-assets/undefined'), null, '1.0', 'all');
     
       // CSS
       wp_enqueue_style('my-style', get_theme_file_uri('/css/styles.css'), null, '1.0', 'all');

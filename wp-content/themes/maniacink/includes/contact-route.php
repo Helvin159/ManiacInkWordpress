@@ -40,7 +40,7 @@ $covid
 
   wp_insert_post(array(
       'post_type' => 'contact',
-      'post_status' => 'publish',
+      'post_status' => 'private',
       'post_title' => $title,
       'post_content' => $contentMessage,
       'meta_input' => array(

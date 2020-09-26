@@ -22,11 +22,27 @@ function message($data){
   $concept = sanitize_text_field($data['concept']);
   $covid = sanitize_text_field($data['covid']);
   
+  $contentMessage = "Here are the details: 
+Name: $title 
+Phone: $phone 
+Email: $email
+
+Please share an explanation of the tattoo you'd like...
+$explanation
+
+For safety reasons, have you been exposed to someone with COVID-19, or been tested? 
+$concept
+
+Covid Question: 
+$covid
+
+";
+
   wp_insert_post(array(
       'post_type' => 'contact',
       'post_status' => 'publish',
       'post_title' => $title,
-      'post_content' => 'Phone: ' + $phone + '' + 'Email: ' + $email + '.',
+      'post_content' => $contentMessage,
       'meta_input' => array(
         'phone_number' =>  $phone,
         'email' => $email,

@@ -303,6 +303,7 @@ html {
   html {
     padding: 0px;
     margin: 0px;
+    background-color: #000000;
   }
 
   .contactform label {

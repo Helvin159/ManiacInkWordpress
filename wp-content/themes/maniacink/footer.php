@@ -6,12 +6,12 @@
 				<div class="col-md-4" style="border-right: 1px solid #fff;">
 				<h4>Page Links</h4>
 					<ul>
-						<a href="<?php esc_url(site_url('/home'));?>"><li>Home</li></a>
-						<a href="<?php esc_url(site_url('/blog'));?>"><li>Blog</li></a>
-						<a href="<?php esc_url(site_url('/large-tats'));?>"><li>Tattoos</li></a>
-						<a href="<?php esc_url(site_url('/portraits'));?>"><li>Portraits</li></a>
-						<a href="<?php esc_url(site_url('/cover-ups'));?>"><li>Cover-ups</li></a>
-						<a href="<?php esc_url(site_url('/small-tats'));?>"><li>Small Tats</li></a>
+						<a href="<?php echo esc_url(site_url('/home'));?>"><li>Home</li></a>
+						<a href="<?php echo esc_url(site_url('/blog'));?>"><li>Blog</li></a>
+						<a href="<?php echo esc_url(site_url('/large-tats'));?>"><li>Tattoos</li></a>
+						<a href="<?php echo esc_url(site_url('/portraits'));?>"><li>Portraits</li></a>
+						<a href="<?php echo esc_url(site_url('/cover-ups'));?>"><li>Cover-ups</li></a>
+						<a href="<?php echo esc_url(site_url('/small-tats'));?>"><li>Small Tats</li></a>
 					</ul>
 				</div>
 				<div class="col-md-4" style="border-right: 1px solid #fff;">
@@ -49,7 +49,7 @@
 			<div class="col-md-3">
 				<div class="row">
 					<div class="col-sm-6 p-3 text-center">
-						<a href="<?php esc_url(site_url())?>"><h3 class="m-auto">Maniac Ink</h3></a>
+						<a href="<?php echo esc_url(site_url())?>"><h3 class="m-auto">Maniac Ink</h3></a>
 					</div>
 					<div class="col-sm-3 text-center">
 						<img src="<?php echo get_theme_file_uri('assets/img/logo3.png')?>">

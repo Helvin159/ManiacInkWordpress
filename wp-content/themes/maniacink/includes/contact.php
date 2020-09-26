@@ -1,15 +1,15 @@
 <div class="container px-5" id="contactForm">
 <label for="name" class="p-2 inputLabels">Full Name: <br>
-  <input type="text" class="textFields" id="name" name="name" required>
+  <input type="text" class="textFields" id="name" name="name"  required>
 </label>
 <br>
 <label class="p-2 inputLabels" for="">Phone Number: <br>
-  <input type="text" class="textFields" id="pNumber" placeholder="Phone Number" name="pNumber">
+  <input type="tel" class="textFields" id="pNumber" maxlength="10" minlength="9" placeholder="Phone Number" name="pNumber">
 </label>
 <br>
 <label  class ="inputLabels p-2" for="">Email: <br>
   <input type="email" class="textFields mr-2" id="address" placeholder="Email" name="email" required>
-  <input type="email" class="textFields ml-2" id="confirmEmail" placeholder="Confirm - Email" name="confirmEmail" required>
+  <input type="email" class="textFields ml-2" id="confirmEmail" placeholder="Confirm - Email" name="confirmEmail"  required>
   <p style="color:red" class="d-none text-right" id="reConfirm">Email does not match!</p>
 </label>
 <br>

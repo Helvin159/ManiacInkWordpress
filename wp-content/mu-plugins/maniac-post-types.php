@@ -116,7 +116,7 @@ function maniac_post_types(){
     'supports' => array('title', 'editor', 'custom-fields', 'post-formats', 'thumbnail'),
     'exclude_from_search' => true,
     'rewrite' => array(
-      'slug' => 'faq'
+      'slug' => 'contact'
     ),
     'public' => true,
     'has_archive' => false,

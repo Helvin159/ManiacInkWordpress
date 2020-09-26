@@ -41,8 +41,7 @@
 		</ul>
 		<div class="m-auto">
 		<?php if(!is_user_logged_in()){ ?>
-			<a class="btn btn-outline-primary my-2 my-sm-0 mx-1" href="<?php echo wp_login_url()?>">Login</a>
-			<a class="btn btn-outline-success my-2 my-sm-0 mx-1" href="<?php echo wp_registration_url()?>">Sign-up</a>
+			<!-- <a class="btn btn-outline-primary my-2 my-sm-0 mx-1" href="<?php //echo wp_login_url()?>">Login</a> -->
 		<?php } else{ ?>
 			<a class="btn btn-outline-danger my-2 my-sm-0" href="<?php echo wp_logout_url()?>">Logout</a>
 		<?php }?>

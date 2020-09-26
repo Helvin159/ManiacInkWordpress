@@ -40,10 +40,21 @@ function message($data){
   $from = $email; // this is the sender's Email address
   $subject = "Form submission";
   $subject2 = "Thank you!";
-  $message = "$name sent the following details:
-  Email: $email
-  Phone: $phone
-  Comments: $concept";
+  $message = "$title sent the following details:
+  
+  Email: $email,
+  Phone: $phone,
+
+  Comments:
+  A brief explanation of your tattoo: 
+  $explanation
+
+  Your tattoo idea/concept: 
+  $concept
+
+  For safety reasons, have you been exposed to someone with COVID-19, or been tested?
+  $covid"
+  ;
 
   $message2 = "Thank you for your email. I'll be in touch as soon as possible."
   ."\n"."

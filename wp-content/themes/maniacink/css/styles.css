@@ -381,6 +381,14 @@ html {
     margin: 0;
     padding: 0;
   }
+  .size-maniacMediumLandscape {
+    width: 275px;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
 
   .navbar {
     top: 0;
@@ -445,6 +453,15 @@ html {
   }
 
   .size-maniacSmallLandscape {
+    width: 265px;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .size-maniacMediumLandscape {
     width: 265px;
     height: auto;
     max-height: auto;

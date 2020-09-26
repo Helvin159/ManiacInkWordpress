@@ -86,7 +86,7 @@
           $recentBlogPost->the_post(); ?>
             <div class="col-md-6">
               <div class="container text-center py-3">
-                <div class="container my-3">
+                <div class="container my-3 text-center">
                   <?php the_post_thumbnail('maniacHomeBlog')?>
                 </div>
               <h3 class="sedgewick"><?php the_title();?></h3>

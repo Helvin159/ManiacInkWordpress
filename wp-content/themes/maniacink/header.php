@@ -24,7 +24,7 @@
 				<a class="nav-link" href="<?php echo esc_url(site_url('/categories'));?>">My Work<span class="sr-only"></span></a>
 			</li>			
 			<li class="nav-item <?php if(is_page('blog')) echo 'active';?>">
-				<a class="nav-link" href="<?php echo esc_url(site_url('/blog'));?>">Blog<span class="sr-only"></span></a>
+				<a class="nav-link" href="<?php echo esc_url(site_url('blog'));?>">Blog<span class="sr-only"></span></a>
 			</li>
 
 

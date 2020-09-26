@@ -116,85 +116,8 @@ footer {
   max-height: auto;
 }
 
-.customers p {
-  padding: 5%;
-}
-
-.customers img {
-  border-radius: 50%;
-  width: 40%;
-}
-
-.thumbnails img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.modal-content {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.extrasOne {
-  min-height: 200px;
-  max-height: 200px;
-  /* background-image: url(../assets/img/1.jpg); */
-  background-position: center;
-  background-size: cover;
-}
-.extrasTwo {
-  padding-bottom: 5%;
-  min-height: 200px;
-  max-height: 200px;
-  /* background-image: url(../assets/img/2.jpg); */
-  background-position: center;
-  background-size: cover;
-}
-
-.workhero {
-  height: 85vh;
-  width: 100vw;
-}
-
-.tattoobg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(IMG/bg2.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.coverupsbg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(IMG/bg4.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.portraitsbg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(IMG/bg5.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-.smtatsbg {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(IMG/bg3.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.abouthero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
-    url(IMG/bg5.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
+.aboutContent p {
+  font-size: 20px;
 }
 
 .hero {
@@ -233,29 +156,8 @@ footer {
   z-index: 10;
 }
 
-.carousel-caption h5 {
-  font-size: 30px;
-  font-weight: 600px;
-  width: 45%;
-  padding: 1%;
-  text-align: center;
-  margin: auto;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.carousel-caption {
-  z-index: 1;
-  color: #fff;
-}
-
 .instagram-media {
   max-width: 90%;
-}
-
-.articles {
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 }
 
 .login h1 a {
@@ -559,5 +461,5 @@ html {
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-}
+/* @media only screen and (min-width: 1200px) {
+} */

@@ -34,9 +34,7 @@ For safety reasons, have you been exposed to someone with COVID-19, or been test
 $concept
 
 Covid Question: 
-$covid
-
-";
+$covid";
 
   wp_insert_post(array(
       'post_type' => 'contact',

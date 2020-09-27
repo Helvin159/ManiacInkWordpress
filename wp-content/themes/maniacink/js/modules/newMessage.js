@@ -40,8 +40,10 @@ class newMessage {
       error: (response) => {
         console.log("sorry");
         console.log(response);
-        $("#contactForm").addClass("d-none");
-        $("#thankYou").removeClass("d-none");
+        setTimeout(function () {
+          $("#contactForm").addClass("d-none");
+          $("#thankYou").removeClass("d-none");
+        }, 850);
       },
     });
   }

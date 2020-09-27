@@ -22,8 +22,10 @@ get_header();
                 </div>
                 <hr>
                 <div class="container">
-                  <h1 class="display-1 sedgewick"><?php the_title()?></h1>
-
+                  <h1 class="sedgewick"><?php the_title()?></h1>
+                  <div class="container">
+                  <p><?php the_content()?></p>
+                  </div>
                 </div>
               </div>
             </div>

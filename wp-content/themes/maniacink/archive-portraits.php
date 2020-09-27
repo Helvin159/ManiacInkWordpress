@@ -10,10 +10,12 @@ get_header();
           <hr class="w-75 center pb-5">
           <div class="row">
             <?php 
+
+
               $showCustomPostType = new WP_Query(array(
+                'paged' => get_query_var('paged', 1),
                 'posts_per_page' => 9,
                 'post_type' => 'portraits',
-                'paged' => get_query_var('paged') ? get_query_var('paged') : 1
               ));
 
               while ($showCustomPostType->have_posts()){
@@ -34,13 +36,13 @@ get_header();
             ?>
             <div class="container text-center p-5">
                   <?php 
-                    // $showCustomPostType->have_posts();
+                    $showCustomPostType->the_post();
                     $base = 99999;
                     echo paginate_links(array(
-                      'base' => str_replace($base, '%#%', get_pagenum_link($base)),
+                      'total' => $showCustomPostType->max_num_pages,
+                      'base' => str_replace($base, '%#%', esc_url(get_pagenum_link($base))),
                       'format' => '?paged=%#%',
                       'current' => max(1, get_query_var('paged')),
-                      'total' => $showCustomPostType->max_num_pages
                     ));
                   
                   wp_reset_postdata();

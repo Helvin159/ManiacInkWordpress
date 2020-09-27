@@ -17,7 +17,9 @@ get_header();
                 <hr>
                 <div class="container">
                   <h3><?the_title()?></h3>
-                  <p><?php the_content()?></p>
+                  <div class="container">
+                    <p><?php the_content()?></p>
+                  </div>
                 </div>
               </div>
           </div>

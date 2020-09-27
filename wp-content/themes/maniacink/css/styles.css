@@ -527,10 +527,65 @@ html {
     font-size: 15px;
     top: 0;
   }
+
+  .size-maniacHomeBlog {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .size-maniacSmallLandscape {
+    width: 200px;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .size-maniacMediumLandscape {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    max-width: 600px;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .size-maniacHomeBlog {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .size-maniacSmallLandscape {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .size-maniacMediumLandscape {
+    width: auto;
+    height: auto;
+    max-height: auto;
+    overflow-x: hiden;
+    margin: 0;
+    padding: 0;
+  }
+
   .thumbs:hover {
     transition: 0.1s ease-in;
     transform: scale(1.02);

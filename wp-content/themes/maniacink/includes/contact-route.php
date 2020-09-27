@@ -10,10 +10,6 @@ function maniacRegisterNewMessage(){
   ));
 }
 
-function test(){
-  return 'thank you for trying to contact us.';
-}
-
 function message($data){
   $title = sanitize_text_field($data['title']);
   $phone = sanitize_text_field($data['phone']);
@@ -36,50 +32,52 @@ $concept
 Covid Question: 
 $covid";
 
+if($email != null and $title != null || $email == 'writingbyb@gmail.com'){
   wp_insert_post(array(
-      'post_type' => 'contact',
-      'post_status' => 'private',
-      'post_title' => $title,
-      'post_content' => $contentMessage,
-      'meta_input' => array(
-        'phone_number' =>  $phone,
-        'email' => $email,
-        'explanation' => $explanation,
-        'concept' => $concept,
-        'covid' => $covid
-      )
-    ));
+    'post_type' => 'contact',
+    'post_status' => 'private',
+    'post_title' => $title,
+    'post_content' => $contentMessage,
+    'meta_input' => array(
+      'phone_number' =>  $phone,
+      'email' => $email,
+      'explanation' => $explanation,
+      'concept' => $concept,
+      'covid' => $covid
+    )
+  ));
 
-  $to = "Melii@ManiacInk.com, Helvin@HelvinRymer.com,Meliisart03@gmail.com"; // this is your Email address
-  $from = $email; // this is the sender's Email address
-  $subject = "New Email From ManiacInk!";
-  $subject2 = "Thank you!";
+$to = "Melii@ManiacInk.com, Helvin@HelvinRymer.com,Meliisart03@gmail.com"; // this is your Email address
+$from = $email; // this is the sender's Email address
+$subject = "New Email From ManiacInk!";
+$subject2 = "Thank you!";
 
 $message = "$title sent the following details:
-  
+
 Email: $email
 Phone: $phone
 
 A brief explanation of your tattoo: 
-  $explanation
+$explanation
 
 Your tattoo idea/concept: 
-  $concept
+$concept
 
 For safety reasons, have you been exposed to someone with COVID-19, or been tested?
-  $covid";
+$covid";
 
-  $message2 = "Thank you for your email. I'll be in touch as soon as possible."
-  ."\n"."
-  Melii
-  ManiacInk.com
-  Melii@ManiacInk.com";
+$message2 = "Thank you for your email. I'll be in touch as soon as possible."
+."\n"."
+Melii
+ManiacInk.com
+Melii@ManiacInk.com";
 
-  $headers = "From:" . $from;
-  $headers2 = "From:" . $to;
+$headers = "From:" . $from;
+$headers2 = "From:" . $to;
 
-  mail($to,$subject,$message,$headers);
-  mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+mail($to,$subject,$message,$headers);
+mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender 
+}
 }
 
 function newMessage(){

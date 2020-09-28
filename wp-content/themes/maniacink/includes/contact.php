@@ -7,7 +7,7 @@
   <input type="tel" class="textFields" id="pNumber" maxlength="10" minlength="9" placeholder="Phone Number" name="pNumber">
 </label>
 <br>
-<label  class ="inputLabels" for="">Email: <br>
+<label  class ="inputLabels" for="">Email:<span style="color:red;">*</span> <br>
   <input type="email" class="textFields" id="address" placeholder="Email" name="email" required>
   <input type="email" class="textFields" id="confirmEmail" placeholder="Confirm - Email" name="confirmEmail"  required>
   <p style="color:red" class="d-none text-right" id="reConfirm">Email does not match!</p>
@@ -40,7 +40,7 @@
   </select>
 </label>
 <br>
-<button id="submit" class="btn btn-md btn-danger my-3">Submit</button>
+<button id="submit" class="btn btn-md btn-danger my-3 d-none">Submit</button>
 </div>
 
 <div class="container text-center p-5 d-none" id="thankYou">

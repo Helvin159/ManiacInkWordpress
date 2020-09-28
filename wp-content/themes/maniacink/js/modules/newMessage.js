@@ -7,6 +7,7 @@ class newMessage {
   }
 
   events() {
+    $("#confirmEmail").on("keypress", this.showSubmitButton);
     $("#submit").on("click", this.messageDispatcher);
   }
 
@@ -46,6 +47,10 @@ class newMessage {
         }, 850);
       },
     });
+  }
+
+  showSubmitButton() {
+    $("#submit").removeClass("d-none");
   }
 }
 

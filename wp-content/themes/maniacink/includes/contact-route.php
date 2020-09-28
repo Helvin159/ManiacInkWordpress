@@ -32,7 +32,9 @@ $concept
 Covid Question: 
 $covid";
 
-if($email != null and $title != null || $email == 'writingbyb@gmail.com'){
+$conditionOne = $email != null and $title != null;
+
+if($conditionOne){
   wp_insert_post(array(
     'post_type' => 'contact',
     'post_status' => 'private',
@@ -52,19 +54,10 @@ $from = $email; // this is the sender's Email address
 $subject = "New Email From ManiacInk!";
 $subject2 = "Thank you!";
 
-$message = "$title sent the following details:
+$message = "$title
 
-Email: $email
-Phone: $phone
-
-A brief explanation of your tattoo: 
-$explanation
-
-Your tattoo idea/concept: 
-$concept
-
-For safety reasons, have you been exposed to someone with COVID-19, or been tested?
-$covid";
+$contentMessage"
+;
 
 $message2 = "Thank you for your email. I'll be in touch as soon as possible."
 ."\n"."

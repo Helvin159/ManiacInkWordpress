@@ -4,6 +4,7 @@
 function maniac_post_types(){
   // Portrait 
   register_post_type('portraits', array(
+    
     'capability_type' => 'portraits',
     'map_meta_cap' => true,
     'show_in_rest' => true,

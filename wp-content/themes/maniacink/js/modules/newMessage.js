@@ -7,7 +7,7 @@ class newMessage {
   }
 
   events() {
-    $("#confirmEmail").on("keypress", this.showSubmitButton);
+    $("#confirmEmail").on("keyup", this.showSubmitButton);
     $("#submit").on("click", this.messageDispatcher);
   }
 
@@ -50,7 +50,13 @@ class newMessage {
   }
 
   showSubmitButton() {
-    $("#submit").removeClass("d-none");
+    if ($("#address").val() == $("#confirmEmail").val()) {
+      $("#submit").removeClass("d-none");
+      $("#reConfirm").addClass("d-none");
+    } else if ($("#address") != $("#confirmEmail")) {
+      $("#reConfirm").removeClass("d-none");
+      $("#submit").addClass("d-none");
+    }
   }
 }
 

@@ -26,10 +26,10 @@ Email: $email
 Please share an explanation of the tattoo you'd like...
 $explanation
 
-For safety reasons, have you been exposed to someone with COVID-19, or been tested? 
+An idea or concept of your tattoo...
 $concept
 
-Covid Question: 
+For safety reasons, have you been exposed to someone with COVID-19, or been tested? 
 $covid";
 
 $conditionOne = $email != null and $title != null;

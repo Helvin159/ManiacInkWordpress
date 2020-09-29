@@ -87,7 +87,7 @@
             <div class="col-md-6">
               <div class="container text-center py-3">
                 <div class="container my-3 text-center">
-                  <?php the_post_thumbnail('maniacHomeBlog')?>
+                  <img class="img-fluid" src="<?php the_post_thumbnail_url('maniacHomeBlog')?>" alt="">
                 </div>
               <h3 class="sedgewick"><?php the_title();?></h3>
               <a href="<?php the_permalink()?>" class="btn btn-md btn-dark">View Full Post</a>

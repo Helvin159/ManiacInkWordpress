@@ -14,11 +14,7 @@ get_header();
             <div class="my-3">
               <div class="container text-center">
                 <div class="container">
-                  
-                  <?php
-                    the_post_thumbnail('maniacMediumLandscape');
-                  ?>
-
+                <img src="<?php the_post_thumbnail_url('maniacMediumLandscape'); ?>" alt="" class="img-fluid">
                 </div>
                 <hr>
                 <div class="container">

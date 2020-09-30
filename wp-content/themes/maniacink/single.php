@@ -12,7 +12,7 @@ get_header();
           <div class="container">
               <div class="container text-center">
                 <div class="container">
-                  <?php the_post_thumbnail('maniacMediumLandscape')?>
+                <img src="<?php the_post_thumbnail_url('maniacMediumLandscape'); ?>" alt="" class="img-fluid">
                 </div>
                 <hr>
                 <div class="container">

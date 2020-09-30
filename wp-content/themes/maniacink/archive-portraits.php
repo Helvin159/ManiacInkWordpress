@@ -24,7 +24,7 @@ get_header();
                   <div class="col-md-4 my-3">
                     <div class="container text-center">
                       <div class="container">
-                      <?php the_post_thumbnail('maniacSmallLandscape'); ?>
+                      <img src="<?php the_post_thumbnail_url('maniacSmallLandscape'); ?>" alt="" class="img-fluid">
                       </div>
                     <hr>
                     <div class="container">

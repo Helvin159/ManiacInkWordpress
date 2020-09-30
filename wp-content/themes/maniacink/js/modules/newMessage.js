@@ -14,13 +14,15 @@ class newMessage {
   // methods
   messageDispatcher() {
     var newMessage = {
-      title: $("#name").val(),
-      phone: $("#pNumber").val(),
-      email: $("#address").val(),
-      explanation: $("#explanation").val(),
-      concept: $("#concept").val(),
-      covid: $("#covid").val(),
-      status: "private",
+      message: {
+        title: $("#name").val(),
+        phone: $("#pNumber").val(),
+        email: $("#address").val(),
+        explanation: $("#explanation").val(),
+        concept: $("#concept").val(),
+        covid: $("#covid").val(),
+        status: "private",
+      },
     };
 
     $.ajax({
@@ -30,6 +32,7 @@ class newMessage {
       url: maniacData.root_url + "/wp-json/maniac/v1/new-message",
       type: "POST",
       data: newMessage,
+      dataType: "json",
       success: (response) => {
         console.log(response);
         console.log("good");
